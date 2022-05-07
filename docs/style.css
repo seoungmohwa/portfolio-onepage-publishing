@@ -1,0 +1,369 @@
+@font-face {
+    font-family: 'YeolrinGothic-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/YeolrinGothic-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html>body {
+  font-family:'YeolrinGothic-Medium';
+  font-size:1.2rem;
+}
+
+
+
+/* lib */
+.con {
+  width:var(--site-width);
+  margin:0 auto;
+}
+
+.con-min-width {
+  min-width:var(--site-width);
+}
+
+
+
+/* custom */
+
+:root {
+  --site-width:1080px;
+}
+
+.top-bar {
+ 
+  border-bottom:1px solid gray;
+  position:fixed;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: 2;
+  height: 80px;
+ 
+}
+
+ .main-text > a::after {
+  content:">";
+  margin-left:5px;
+  text-decoration:none;
+}
+
+
+/*1차메뉴*/
+
+.menu>ul>li>a{
+  height:100%;
+  display:flex;
+  align-items:center;
+  padding:0 30px;
+  
+}
+
+
+.menu>ul>li>div{
+
+  display:none;
+  position:absolute;
+  left:0;
+  width:100%;
+  transform:translateY(1px);
+}
+
+
+.menu>ul>li:hover>div{
+  display:block;
+  background-color:white;
+  z-index:1;
+  padding-bottom:30px;
+  transform:translateY(1px)
+}
+
+
+
+
+/*2,3 차메뉴*/
+.menu > ul > li > div > div  ul> li >a {
+  display:block;
+  text-align:center;
+}
+
+
+.menu > ul > li > div > div > ul > li> a{
+  padding:30px 0;
+  font-weight:bold;
+}
+
+.menu > ul > li > div > div > ul > li > ul >li > a {
+   padding:10px 0;
+  
+}
+
+
+/*서류 제출하기 버튼*/
+
+.top-bar > div >a:last-child {
+  background-color:#fede22;
+  padding:15px 30px;
+  border-radius:30px;
+  
+}
+
+
+/*밑줄 애니메이션*/
+
+.menu> ul> li> a{
+  position:relative;
+  
+  
+}
+
+.menu> ul> li> a::after{
+  content:"";
+  background-color:#ffe400;
+  position:absolute;
+  left:0;
+  top:100%;
+  width:0%;
+  height:1px;
+  bottom:-1 px;
+  transition:width 0.5s;
+}
+
+
+.menu> ul> li:hover> a::after{
+  width:100%;
+}
+
+
+/*메가메뉴 완성 */
+
+
+/*메인페이지 시작 */
+.kakao-img{
+  position:relative;
+  
+}
+
+.main-text{
+  position:absolute;
+  top:15%;  
+}
+
+
+
+.main-text >ul > li >a {
+  background-color:white;
+  margin-top:30px;
+  margin-right:10px;
+  border-radius:15px;
+  font-weight:600;
+  
+  
+}
+
+.main {
+  background-color:#ffef6b;
+  height:648px;
+}
+
+/*메인페이지 완료 */
+
+/*sub 시작 */
+.sub-item{
+  min-height:750px;
+  display:flex; 
+}
+
+.sub-item>div:first-child{
+  width:55%;
+  
+  display:flex;
+  align-items:center;
+  
+}
+
+.sub-item>div:last-child{
+  flex-grow:1;
+  
+  display:flex;
+  align-items:center;
+}
+
+
+ .sub-item >.sub-text-box > .sub-text-list >.sub-btn > a::after {
+  content:">";
+  margin-left:5px;
+  text-decoration:none;
+}
+
+.sub-h {
+  height:32px;
+  background-color:#fafafa;
+}
+
+.sub-btn>a{
+  background-color:#f6f6f6;
+  padding:15px 50px;
+  border-radius:15px;
+  
+  
+}
+
+
+.sub-btn>a:hover>span{
+  text-decoration:underline;
+}
+
+
+/* sub-1 */
+
+.text-list-1{
+  margin-left:56px;
+}
+
+/*sub 완료 */
+
+/*체크카드 시작 */
+
+ .last-item >.last-text-box > .last-text-list >.last-btn > a::after {
+  content:">";
+  margin-left:5px;
+  text-decoration:none;
+}
+
+.last-btn>a{
+  background-color:#f6f6f6;
+  padding:15px 60px;
+  border-radius:15px;
+  
+  
+}
+
+
+.last-btn>a:hover>span{
+  text-decoration:underline;
+}
+
+
+.card-box >.card-list> div> img:first-child{
+  display:block;
+  width:240px;
+}
+
+
+
+.card-box >.card-list> div.green-card {
+  margin-left:-100px;
+  margin-right:-100px;
+  z-index:1;
+} 
+
+.card-box >.card-list> div.green-card > img {
+  transform:scale(1.2);
+}
+
+.card-box {
+  position:relative;
+}
+
+.card-box >.bt >div{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:20px;
+  
+}
+
+.last-item .card-box > .bt > div:active {
+  transform:translateY(-50%);
+}
+
+.last-item >.card-box> div.bt >div:last-child{
+ 
+  left:auto;
+  right:30px;
+}
+
+/*체크카드 완료 */
+
+
+/*기술페이지 시작 */
+.skill-box > .con > .divider::after {
+  content:"";
+  display:block;
+  height:100%;
+  width:100px;
+  background-color:black;
+}
+
+.skill-box > .con > .info-box::before {
+  content:"";
+  position:absolute;
+  left:0;
+  width:100%;
+  height:1px;
+  background-color:#eee;
+  transform:translateY(122px);
+  z-index:-1;
+}
+
+.skill-box > .con > .info-box > ul > li {
+  width:268px;
+}
+
+.skill-box > .con > .info-box > ul > li.flex-grow-1 {
+  width:auto;
+}
+
+/*기술페이지 완료 */
+
+footer {
+  height:180px;
+  background-color: #f6f6f6;
+  flex-direction:column;
+  justify-content:center;
+}
+.footer-line-1 {
+  justify-content:space-between;
+ 
+}
+
+.footer-line-1>li:nth-child(5),
+.footer-line-1>li:nth-child(7),
+.footer-line-1>li:nth-child(9),
+.footer-line-2>li:nth-child(1){
+  font-weight:bold;
+}
+
+
+.footer-line-1,
+.footer-line-2,
+.footer-line-3,
+.left-box,
+.right-box{
+  display:flex;
+  font-size:12px;
+}
+
+.footer-line-2 {
+  margin-top:6px;
+}
+.footer-line-2>li:nth-child(2) {
+ 
+  padding-right:20px;
+}
+
+.footer-line-3 {
+  margin-top:12px;
+  justify-content:space-between;
+}
+
+.right-box {
+   flex-wrap: wrap;
+   gap: 10px;
+}
+
+
+
+
+
